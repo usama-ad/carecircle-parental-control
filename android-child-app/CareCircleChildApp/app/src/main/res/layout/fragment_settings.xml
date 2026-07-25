@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.SettingsFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="24dp"
+                android:textSize="@dimen/text_title_large"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/public_sans_bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/buttonColor"
+                android:fontFamily="@font/public_sans_bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <LinearLayout
+                        android:id="@+id/rowUsageAccess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/username"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_body" />
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/public_sans"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_body" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="12dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/rowOverlayPermission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/email"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textSize="@dimen/text_body" />
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textSecondary"
+                            android:fontFamily="@font/public_sans"
+                            android:textSize="@dimen/text_body" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="12dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/rowParentInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/parent"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textSize="@dimen/text_body" />
+                        <TextView
+                            android:id="@+id/parentName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textSecondary"
+                            android:fontFamily="@font/public_sans"
+                            android:textSize="@dimen/text_body" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/restrictions"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/buttonColor"
+                android:fontFamily="@font/public_sans_bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <LinearLayout
+                        android:id="@+id/rowLockStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:layout_weight="1"
+                            android:text="Lock Status"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_body" />
+                        <TextView
+                            android:id="@+id/tvLockStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/public_sans"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_body"
+                            android:text="--" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="12dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/allowedScheduleLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:layout_weight="1"
+                            android:text="@string/allowed_schedule"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_body" />
+                        <TextView
+                            android:id="@+id/tvSchedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/public_sans"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_body"
+                            android:text="@string/dash" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="12dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/restricted_apps"
+                        android:fontFamily="@font/public_sans_medium"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_body"
+                        android:layout_marginBottom="8dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerRestrictedApps"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/card_background" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alerts_managed_by_parent"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/buttonColor"
+                android:fontFamily="@font/public_sans_bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/tvEyeStrainAlert"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="@string/eye_strain"
+                        android:fontFamily="@font/public_sans_medium"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_body"
+                        app:thumbTint="@color/buttonColor"
+                        app:trackTint="@color/buttonColorDisabled"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="4dp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/tvFaceDistanceAlert"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="@string/face_distance"
+                        android:textColor="@color/textPrimary"
+                        android:fontFamily="@font/public_sans_medium"
+                        android:textSize="@dimen/text_body"
+                        app:thumbTint="@color/buttonColor"
+                        app:trackTint="@color/buttonColorDisabled"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginVertical="4dp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/tvRestrictedAppAlert"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="@string/restricted_app_alerts"
+                        android:textColor="@color/textPrimary"
+                        android:fontFamily="@font/public_sans_medium"
+                        android:textSize="@dimen/text_body"
+                        app:thumbTint="@color/buttonColor"
+                        app:trackTint="@color/buttonColorDisabled"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLinkToParent"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="@string/link_to_parent"
+                android:textSize="@dimen/text_button"
+                android:textColor="@color/white"
+                android:fontFamily="@font/public_sans_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/buttonColor"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="@string/logout"
+                android:textSize="@dimen/text_button"
+                android:textColor="@color/white"
+                android:fontFamily="@font/public_sans_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/red"
+                android:layout_marginBottom="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

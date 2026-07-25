@@ -1,0 +1,23 @@
+# Android
+.gradle/
+local.properties
+.idea/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Kotlin
+*.iml
+
+# Logs
+*.log
+
+# Firebase
+google-services.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

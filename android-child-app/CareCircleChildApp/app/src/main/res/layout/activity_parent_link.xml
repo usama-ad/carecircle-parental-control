@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Activities.ParentLinkActivity">
+
+
+    <!-- Device ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDeviceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_body" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyId"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/copy_device_id"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_button"
+            app:backgroundTint="@color/buttonColor"
+            app:cornerRadius="@dimen/button_radius" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowQr"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/show_qr_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_button"
+            app:backgroundTint="@color/buttonColor"
+            app:cornerRadius="@dimen/button_radius" />
+
+        <ImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQrInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/ask_parent_to_scan_qr_code"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_body"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Copy ID Button -->
+
+    <!-- Show QR Button -->
+
+    <!-- QR Code Image (Hidden initially) -->
+
+    <!-- QR Instruction Text -->
+
+    <!-- Cancel Button -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

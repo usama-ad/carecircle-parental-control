@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:fontFamily="@font/public_sans_bold"
+            android:text="@string/device_settings"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_title_large" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/dividerColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:text="@string/select_child"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_title" />
+
+                <TextView
+                    android:id="@+id/selectedChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/screen_time"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/dividerColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:text="@string/screen_time"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/allowed_usage_schedule"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:id="@+id/tvSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:background="@drawable/bg_clickable_field"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="12dp"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_body"
+                    tools:text="Mon - Fri, 2 hours daily" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/lockButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/lock_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_button"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/dividerColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:text="@string/alerts"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_title" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchRestrictedApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/restrcited_apps"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_small" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchEyeStrain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/eye_strain_alert"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_small" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchFaceDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/face_distance_alert"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/dividerColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:id="@+id/manageAppsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:text="@string/installed_apps"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_title" />
+
+                <ProgressBar
+                    android:id="@+id/installed_apps_progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/margin_medium"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/childAppsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    tools:itemCount="3"
+                    tools:listitem="@android:layout/simple_list_item_2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/saveChangesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:backgroundTint="@color/buttonColor"
+                    android:fontFamily="@font/public_sans_medium"
+                    android:text="@string/save_changes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_button"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_usage"
+            android:textSize="@dimen/text_title_large"
+            android:fontFamily="@font/public_sans_bold"
+            android:textColor="@color/textPrimary"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/dividerColor"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/today_s_usage_time"
+                    android:textSize="@dimen/text_small"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:textColor="@color/textSecondary"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.05"/>
+
+                <TextView
+                    android:id="@+id/dailyTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/_0h_0m"
+                    android:textSize="36sp"
+                    android:fontFamily="@font/public_sans_bold"
+                    android:textColor="@color/textPrimary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_details"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/public_sans_bold"
+                android:textColor="@color/buttonColor"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="4dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/games"
+                            android:layout_marginEnd="16dp" />
+                        <TextView
+                            android:id="@+id/topMostApp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/fun_games"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/topMostTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1h 30m"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_bold"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/social_media"
+                            android:layout_marginEnd="16dp" />
+                        <TextView
+                            android:id="@+id/secTopMostApp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/social_media"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/secTopMostTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45m"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_bold"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/learning"
+                            android:layout_marginEnd="16dp" />
+                        <TextView
+                            android:id="@+id/thirdTopMostApp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/learning_apps"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/thirdTopMostTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1h"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_bold"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/other"
+                            android:layout_marginEnd="16dp" />
+                        <TextView
+                            android:id="@+id/fourthTopMostApp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/other_apps"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_medium"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/fourthTopMostTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1h"
+                            android:textSize="@dimen/text_body"
+                            android:fontFamily="@font/public_sans_bold"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>

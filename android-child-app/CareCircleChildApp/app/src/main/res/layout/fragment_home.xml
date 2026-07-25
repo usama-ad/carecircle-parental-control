@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/child_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:paddingBottom="@dimen/padding_medium">
+
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:fontFamily="@font/public_sans_bold"
+        android:text="@string/home"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/text_title_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/posture_icon"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo4"
+        android:background="@color/zxing_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome" />
+
+    <TextView
+        android:id="@+id/childName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/public_sans_bold"
+        android:text=""
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/screenTimeCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/dividerColor"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/childName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/allowedUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/public_sans_medium"
+                android:text="@string/you_can_use_between"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/text_small"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:id="@+id/allowedUsageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/public_sans_bold"
+                android:text="@string/_0h_00m"
+                android:textColor="@color/buttonColor"
+                android:textSize="32sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/motivationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/public_sans_bold"
+        android:text="@string/tips"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintStart_toStartOf="@+id/screenTimeCard"
+        app:layout_constraintTop_toBottomOf="@id/screenTimeCard" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/motivationContainerCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/dividerColor"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/screenTimeCard"
+        app:layout_constraintStart_toStartOf="@+id/motivationTitle"
+        app:layout_constraintTop_toBottomOf="@id/motivationTitle">
+
+        <LinearLayout
+            android:id="@+id/motivationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/motivation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/public_sans_medium"
+                android:text="@string/remember_to_blink_often_to_protect_your_eyes"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_medium"
+                android:drawableStart="@drawable/learning"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/motivation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/public_sans_medium"
+                android:text="@string/don_t_stay_too_close_to_the_screen"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_medium"
+                android:drawableStart="@drawable/learning"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor" android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/motivation4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/public_sans_medium"
+                android:text="@string/take_breaks_regularly"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_medium"
+                android:drawableStart="@drawable/learning"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motivationContainerCard"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/public_sans_medium"
+            android:text="@string/you_are_being_monitored_by_parentname"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/parentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/public_sans_bold"
+            android:text="@string/dashes"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:theme="@style/Widget.AppCompat.ProgressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
