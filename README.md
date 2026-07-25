@@ -43,7 +43,7 @@ CareCircle is a modern parental control solution consisting of separate Parent a
 # 🎥 Demo
 
 <p align="center">
-  <img src="demo/demo.gif" width="900" alt="CareCircle Demo"/>
+  <img src="demo/demo.gif" width="320" alt="CareCircle Demo"/>
 </p>
 
 ---
